@@ -1,5 +1,7 @@
 (ns tic-tac-clo.core
-  (:gen-class))
+  (:gen-class)
+  (:use tic-tac-clo.misc)
+  )
 	;-----------------------------------------------------------------------
 	;immutables
 	;-----------------------------------------------------------------------
@@ -68,7 +70,7 @@
 	(defn -main
     "I don't do a whole lot ... yet."
     [& args]
-    (println "Hello, World!")
-	(game-loop game-board players win-conditions square-values)
+    (println "Welcome to tic-tac-clo.")
+	(game-loop game-board player-rotation win-conditions square-values print-board-default)
   )
 
