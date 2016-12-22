@@ -60,8 +60,11 @@
 					-stalemate 	(= true (stalemate? -gameboard -win))
 				]
 				(output-print-board-function -gameboard)
-				(when (= true -win)(println "win"))
-				(if-not (= true -win) 
+				(if (or (= true -win) (= true -stalemate))
+					(do
+						(when (= true -win)      (println "win"))
+						(when (= true -stalemate)(println "stalemate"))
+					)
 					(recur
 						-gameboard
 						(rest playerrotation)
