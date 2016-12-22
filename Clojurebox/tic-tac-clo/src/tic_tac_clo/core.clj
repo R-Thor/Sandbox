@@ -18,8 +18,6 @@
 		(some (fn [wc] (win-event? board wc)) winconditions)
 	)
 	(defn stalemate? [board] (unreduced false))
-
-
 	(defn to-single-digit [somestrval] 
 		(-(int (last(into () (str somestrval))))48)
 	)
@@ -35,9 +33,9 @@
 			init-game-board
 			init-player-rotation
 			init-win-conditions
-			init-square-values
 			output-print-board-function
 		]
+		(output-print-board-function init-game-board)
 		(loop 
 			[
 				gameboard		init-game-board		
@@ -54,14 +52,13 @@
 					-win 		(= true (winner? -gameboard init-win-conditions))
 					-stalemate 	(= true (stalemate? -gameboard))
 				]
-				;(println -gameboard)
 				(output-print-board-function -gameboard)
 				(when (= true -win)(println "win"))
 				(if-not (= true -win) 
-				(recur
-					-gameboard
-					(rest playerrotation)
-				)
+					(recur
+						-gameboard
+						(rest playerrotation)
+					)
 				)
 			)
 		)
@@ -71,6 +68,6 @@
     "I don't do a whole lot ... yet."
     [& args]
     (println "Welcome to tic-tac-clo.")
-	(game-loop game-board player-rotation win-conditions square-values print-board-default)
+	(game-loop game-board player-rotation win-conditions print-board-default)
   )
 

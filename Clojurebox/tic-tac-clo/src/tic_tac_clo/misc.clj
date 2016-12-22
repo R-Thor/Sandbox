@@ -37,3 +37,18 @@
 			)
 		)
 	)
+	(defn print-board-default [board]
+		(do
+			(doseq [spc board]
+				(do 
+					(if (= nil (val spc))
+					(print (key spc))
+					(print (val spc)))
+					(when 
+						(= 0 (mod (inc (key spc)) (int (Math/sqrt (count board)))))
+						(print "\n")(flush)
+					)
+				)
+			)
+		)
+	)
