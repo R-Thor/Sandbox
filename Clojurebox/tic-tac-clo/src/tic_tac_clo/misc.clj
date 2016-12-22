@@ -1,10 +1,5 @@
 (ns tic-tac-clo.misc
   (:gen-class))
-	(defn squares-available
-		"takes a board and returns a sequence of unused (empty/nil) spaces."
-		[board] 
-		(keys (filter (fn [[k v]](= nil v)) board))
-	)
 	(defn square-distribution 
 		"" 
 		[board] 
@@ -39,3 +34,4 @@
 			)
 		)
 	)
+	
