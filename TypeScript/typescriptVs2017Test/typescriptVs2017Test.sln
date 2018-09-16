@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "typescriptVs2017Test", "typescriptVs2017Test\typescriptVs2017Test.njsproj", "{AF71449F-A73E-4E1E-8D34-F01E86AA90BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF71449F-A73E-4E1E-8D34-F01E86AA90BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF71449F-A73E-4E1E-8D34-F01E86AA90BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF71449F-A73E-4E1E-8D34-F01E86AA90BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF71449F-A73E-4E1E-8D34-F01E86AA90BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F630FF51-2831-4CD4-8AF8-B2C265DC7E8C}
+	EndGlobalSection
+EndGlobal

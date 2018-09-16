@@ -1,0 +1,16 @@
+﻿<Window x:Class="SmallGroupManagement.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SmallGroupManagement"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Canvas>
+        <Menu HorizontalAlignment="Left" Width="100">
+            <MenuItem Header="Groups"></MenuItem>
+            <MenuItem Header="Schedules"></MenuItem>
+            <MenuItem Header="Schedules"></MenuItem>
+        </Menu>
+    </Canvas>
+</Window>

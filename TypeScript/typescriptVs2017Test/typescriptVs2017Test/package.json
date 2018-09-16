@@ -1,0 +1,12 @@
+{
+  "name": "typescript-vs2017-test",
+  "version": "0.0.0",
+  "description": "typescriptVs2017Test",
+  "main": "app.js",
+  "author": {
+    "name": "swayb"
+  },
+  "devDependencies": {
+    "@types/node": "^6.0.87"
+  }
+}

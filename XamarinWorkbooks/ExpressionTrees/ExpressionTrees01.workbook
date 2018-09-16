@@ -1,0 +1,82 @@
+---
+uti: com.xamarin.workbook
+id: 2a92063d-e3ef-4306-b4e8-d7091863b539
+title: ExpressionTrees01
+platforms:
+- Console
+---
+
+```csharp
+var sum = 1 + 2;
+```
+
+```csharp
+Console.WriteLine(sum);
+```
+
+```csharp
+using System.Linq.Expressions;
+```
+
+```csharp
+Expression<Func<int, int>> addFive = (num) => num + 5;
+```
+
+```csharp
+if (addFive.NodeType == ExpressionType.Lambda)
+{
+    var lambdaExp = (LambdaExpression)addFive;
+    var parameter = lambdaExp.Parameters.First();
+    Console.WriteLine(parameter.Name);
+    Console.WriteLine(parameter.Type);
+}
+```
+
+```csharp
+var one = Expression.Constant(1, typeof(int));
+var two = Expression.Constant(2, typeof(int));
+var addition = Expression.Add(one, two);
+```
+
+```csharp
+var three = Expression.Constant(3,typeof(int));
+```
+
+```csharp
+var addition = Expression.Add(two, three);
+```
+
+```csharp
+//ExpressionType
+//Expression
+//ExpressionVisitor
+```
+
+```csharp
+Expression<Func<int>> add = () => 1 + 2;
+var func = add.Compile(); // Create Delegate
+var answer = func(); // Invoke Delegate
+Console.WriteLine(answer);
+```
+
+```csharp
+var addFiveCompiled = addFive.Compile();
+```
+
+```csharp
+addFiveCompiled(5);
+```
+
+```csharp
+private static Func<int, int> CreateBoundFunc()
+{
+    var constant = 5; // constant is captured by the expression tree
+    Expression<Func<int, int>> expression = (b) => constant + b;
+    var rVal = expression.Compile();
+    return rVal;
+}
+```
+
+```csharp
+//https://docs.microsoft.com/en-us/dotnet/csharp/expression-trees-interpreting
+```

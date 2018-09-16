@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  webapi_core_helloworld:
+    image: ${DOCKER_REGISTRY}webapicorehelloworld
+    build:
+      context: .
+      dockerfile: webapi_core_HelloWorld\Dockerfile
